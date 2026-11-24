@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#bg2)"/>
+  
+  <!-- Browser window chrome -->
+  <rect x="30" y="25" width="540" height="310" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <rect x="30" y="25" width="540" height="36" rx="10" fill="#0f172a"/>
+  <!-- Window buttons -->
+  <circle cx="55" cy="43" r="5" fill="#ef4444"/>
+  <circle cx="72" cy="43" r="5" fill="#f59e0b"/>
+  <circle cx="89" cy="43" r="5" fill="#10b981"/>
+  <rect x="120" y="34" width="280" height="18" rx="4" fill="#1e293b"/>
+  <text x="135" y="47" fill="#64748b" font-family="sans-serif" font-size="10">https://task-kanban.app</text>
+
+  <!-- Board title & Add Task -->
+  <text x="55" y="93" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="bold">Tablero Kanban de Tareas</text>
+  <rect x="440" y="78" width="110" height="24" rx="6" fill="#10b981"/>
+  <text x="465" y="94" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">+ Nueva Tarea</text>
+
+  <!-- Column 1: Por Hacer -->
+  <rect x="50" y="115" width="155" height="195" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="60" y="125" width="80" height="14" rx="4" fill="#ef4444" opacity="0.8"/>
+  <text x="68" y="136" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">POR HACER (3)</text>
+  <!-- Task cards -->
+  <rect x="60" y="150" width="135" height="42" rx="6" fill="#1e293b"/>
+  <rect x="70" y="160" width="100" height="8" rx="2" fill="#e2e8f0"/>
+  <rect x="70" y="174" width="60" height="6" rx="2" fill="#ef4444"/>
+
+  <rect x="60" y="200" width="135" height="42" rx="6" fill="#1e293b"/>
+  <rect x="70" y="210" width="85" height="8" rx="2" fill="#e2e8f0"/>
+  <rect x="70" y="224" width="40" height="6" rx="2" fill="#f59e0b"/>
+
+  <rect x="60" y="250" width="135" height="42" rx="6" fill="#1e293b"/>
+  <rect x="70" y="260" width="90" height="8" rx="2" fill="#e2e8f0"/>
+  <rect x="70" y="274" width="50" height="6" rx="2" fill="#38bdf8"/>
+
+  <!-- Column 2: En Progreso -->
+  <rect x="222" y="115" width="155" height="195" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="232" y="125" width="95" height="14" rx="4" fill="#f59e0b" opacity="0.8"/>
+  <text x="240" y="136" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">EN PROGRESO (2)</text>
+  <!-- Task cards -->
+  <rect x="232" y="150" width="135" height="42" rx="6" fill="#1e293b"/>
+  <rect x="242" y="160" width="95" height="8" rx="2" fill="#e2e8f0"/>
+  <rect x="242" y="174" width="55" height="6" rx="2" fill="#f59e0b"/>
+
+  <rect x="232" y="200" width="135" height="42" rx="6" fill="#1e293b"/>
+  <rect x="242" y="210" width="75" height="8" rx="2" fill="#e2e8f0"/>
+  <rect x="242" y="224" width="45" height="6" rx="2" fill="#38bdf8"/>
+
+  <!-- Column 3: Hecho -->
+  <rect x="395" y="115" width="155" height="195" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <rect x="405" y="125" width="80" height="14" rx="4" fill="#10b981" opacity="0.8"/>
+  <text x="415" y="136" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">HECHO (4)</text>
+  <!-- Task cards -->
+  <rect x="405" y="150" width="135" height="42" rx="6" fill="#1e293b"/>
+  <rect x="415" y="160" width="80" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="415" y="174" width="40" height="6" rx="2" fill="#10b981"/>
+
+  <rect x="405" y="200" width="135" height="42" rx="6" fill="#1e293b"/>
+  <rect x="415" y="210" width="90" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="415" y="224" width="60" height="6" rx="2" fill="#10b981"/>
+</svg>

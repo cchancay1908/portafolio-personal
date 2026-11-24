@@ -1,0 +1,525 @@
+/* ==========================================================================
+   GLOBAL.CSS - Estilos Globales, Paleta Microsoft (Blanco/Azul) y Tema Día/Noche
+   Proyecto de Clase: Portafolio Web Personal
+   Estilo: Microsoft Fluent Design / Windows
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES DE TEMA (:root - Modo Día / Claro por Defecto)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Paleta Microsoft: Blanco, Gris Fresco y Azul Microsoft */
+  --color-bg: #f8fafc;              /* Fondo general fresco */
+  --color-surface: #ffffff;         /* Fondo de tarjetas y header */
+  --color-surface-hover: #f1f5f9;   /* Hover en tarjetas y elementos */
+  --color-primary: #0078d4;         /* Azul oficial Microsoft */
+  --color-primary-hover: #005a9e;   /* Azul oscuro Microsoft al pasar el cursor */
+  --color-primary-light: #eff6ff;   /* Azul muy tenue para fondos sutiles */
+  --color-secondary: #0067b8;       /* Azul complementario */
+  --color-text: #1e293b;            /* Texto principal legible */
+  --color-text-muted: #5c6b73;      /* Texto secundario / gris corporativo */
+  --color-border: #e2e8f0;          /* Borde sutil y limpio */
+  --color-border-hover: #0078d4;    /* Borde resaltado al enfocar */
+  --color-success: #107c41;         /* Verde corporativo (estilo Excel/Microsoft) */
+  --color-error: #a80000;           /* Rojo corporativo */
+
+  /* Tipografía oficial de Microsoft */
+  --font-main: 'Segoe UI Variable Text', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+
+  /* Bordes: Formato cuadrado limpio con leve radio Fluent */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-full: 9999px;
+
+  /* Sombras sutiles estilo Microsoft Fluent */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.09);
+
+  /* Layout y transiciones */
+  --container-max: 1120px;
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. MODO NOCHE / OSCURO ([data-theme="dark"]) - Estilo Windows Dark Mode
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  --color-bg: #111827;              /* Fondo gris oscuro pizarra (sin neón) */
+  --color-surface: #1f2937;         /* Superficie de tarjetas */
+  --color-surface-hover: #2d3748;   /* Hover oscuro */
+  --color-primary: #0078d4;         /* Azul Microsoft accesible */
+  --color-primary-hover: #2b88d8;   /* Azul claro al enfocar */
+  --color-primary-light: rgba(0, 120, 212, 0.18);
+  --color-secondary: #38bdf8;       /* Acento fresco */
+  --color-text: #f9fafb;            /* Texto blanco suave */
+  --color-text-muted: #9ca3af;      /* Texto atenuado */
+  --color-border: #374151;          /* Borde oscuro */
+  --color-border-hover: #60a5fa;
+  --color-success: #34d399;
+  --color-error: #f87171;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   3. RESET UNIVERSAL Y ESTILOS BASE
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Evita zoom automático indeseado en iPhone Safari */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   4. CLASES UTILITARIAS Y COMPONENTES
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(0, 120, 212, 0.2);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Botones estilo Microsoft (sobrios, sólidos, esquinas limpias) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  min-height: 44px; /* Estándar táctil para iPhone */
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+.btn-sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  min-height: 38px;
+}
+
+/* Badges e insignias de tecnologías */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border: 1px solid rgba(0, 120, 212, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   5. ENCABEZADO Y BARRA DE NAVEGACIÓN (HEADER)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-bracket {
+  color: var(--color-primary);
+}
+
+.logo-slash {
+  color: var(--color-secondary);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 0.2rem;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+/* Contenedor de acciones: Botón Tema + Botón Hamburguesa */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Botón Switch Modo Día / Noche */
+.theme-toggle {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition);
+  min-height: 40px;
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: inline-block;
+}
+
+/* Ocultar / mostrar icono según el tema */
+[data-theme="light"] .theme-icon-sun {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-moon {
+  display: inline-block;
+}
+
+[data-theme="dark"] .theme-icon-sun {
+  display: inline-block;
+}
+
+[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+
+/* Botón Hamburguesa Móvil */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 0.55rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-height: 40px;
+  min-width: 40px;
+  align-items: center;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: var(--transition);
+}
+
+.menu-toggle.active .hamburger-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .hamburger-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* --------------------------------------------------------------------------
+   6. PIE DE PÁGINA (FOOTER)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: 2.25rem 0;
+  margin-top: auto;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-copyright {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.social-link:hover {
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVIDAD (Optimizado para iPhone 16 Pro - 402px y pantallas móviles)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-surface);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem 1.5rem;
+    gap: 0.85rem;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    display: none;
+  }
+
+  .nav-menu.open {
+    display: flex;
+    animation: slideDownMenu 0.2s ease forwards;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--color-border);
+    display: block;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+/* Ajustes finos específicos para iPhone 16 Pro y móviles (<= 430px) */
+@media (max-width: 430px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    height: 64px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .theme-toggle-text {
+    display: none; /* Oculta la palabra 'Tema' en pantallas muy angostas dejando solo el icono */
+  }
+
+  .theme-toggle {
+    padding: 0.5rem;
+    min-width: 40px;
+    justify-content: center;
+  }
+
+  .section {
+    padding: 3.25rem 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+}
+
+@keyframes slideDownMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
