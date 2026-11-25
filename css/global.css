@@ -245,20 +245,55 @@ input, select, textarea, button {
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-text);
   letter-spacing: -0.3px;
   display: flex;
   align-items: center;
+  gap: 0.15rem;
+  font-family: var(--font-main);
+  text-decoration: none;
 }
 
-.logo-bracket {
-  color: var(--color-primary);
+/* Colores estilo Windows Metro UI */
+.logo-brace {
+  color: #0078d7; /* Metro Blue */
+  font-weight: 700;
 }
 
-.logo-slash {
-  color: var(--color-secondary);
+.logo-name {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.logo-divider {
+  color: #00a4ef; /* Metro Cyan / Light Blue */
+  font-weight: 400;
+  margin: 0 0.15rem;
+}
+
+.logo-role {
+  color: #0078d4;
+  font-weight: 600;
+  background-color: var(--color-primary-light);
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid #0078d7;
+}
+
+[data-theme="dark"] .logo-brace {
+  color: #00a4ef;
+}
+
+[data-theme="dark"] .logo-divider {
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .logo-role {
+  color: #38bdf8;
+  background-color: rgba(0, 120, 212, 0.18);
+  border-left-color: #00a4ef;
 }
 
 .nav-menu {
