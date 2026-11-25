@@ -73,22 +73,24 @@
   align-items: center;
 }
 
-/* FOTOGRAFÍA CUADRADA - Estilo Microsoft Windows / Fluent Design */
+/* FOTOGRAFÍA CON ESQUINAS REDONDEADAS Y EFECTO DE ENFOQUE DESTACADO */
 .hero-avatar {
   width: 280px;
   height: 280px;
-  border-radius: var(--radius-md); /* Formato cuadrado con terminación limpia */
+  border-radius: 20px; /* Diseño con esquinas suavemente redondeadas */
   object-fit: cover;
   object-position: center top;
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border);
   box-shadow: var(--shadow-md);
   background-color: var(--color-surface);
-  transition: var(--transition);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .hero-avatar:hover {
-  box-shadow: var(--shadow-lg);
   border-color: var(--color-primary);
+  /* Efecto de borde más grueso e intenso con anillo sólido y sombra */
+  box-shadow: 0 0 0 5px var(--color-primary), 0 12px 28px rgba(0, 120, 212, 0.25);
+  transform: scale(1.02) translateY(-2px);
 }
 
 /* Sección Resumen / Fortalezas (.highlights) */
@@ -632,6 +634,7 @@
   .hero-avatar {
     width: 230px;
     height: 230px;
+    border-radius: 18px;
   }
 
   .hero-buttons,
