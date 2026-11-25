@@ -1,67 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
   <defs>
-    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#064e3b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+    <linearGradient id="headerGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0078d4"/>
+      <stop offset="100%" stop-color="#005a9e"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="360" fill="url(#bg2)"/>
+
+  <!-- Fondo de la ventana -->
+  <rect width="600" height="360" fill="#0f172a" rx="8"/>
   
-  <!-- Browser window chrome -->
-  <rect x="30" y="25" width="540" height="310" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
-  <rect x="30" y="25" width="540" height="36" rx="10" fill="#0f172a"/>
-  <!-- Window buttons -->
-  <circle cx="55" cy="43" r="5" fill="#ef4444"/>
-  <circle cx="72" cy="43" r="5" fill="#f59e0b"/>
-  <circle cx="89" cy="43" r="5" fill="#10b981"/>
-  <rect x="120" y="34" width="280" height="18" rx="4" fill="#1e293b"/>
-  <text x="135" y="47" fill="#64748b" font-family="sans-serif" font-size="10">https://task-kanban.app</text>
+  <!-- Barra superior estilo Panel de Seguridad de Windows -->
+  <rect x="0" y="0" width="600" height="42" fill="url(#headerGrad2)" rx="8"/>
+  <rect x="0" y="30" width="600" height="12" fill="url(#headerGrad2)"/>
+  
+  <!-- Título -->
+  <text x="24" y="26" fill="#ffffff" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">Seguridad de la Información | Cifrado de Unidades &amp; Gestión de Activos</text>
+  <rect x="460" y="11" width="120" height="20" rx="3" fill="rgba(255,255,255,0.18)"/>
+  <text x="520" y="25" fill="#ffffff" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">BitLocker: Activado</text>
 
-  <!-- Board title & Add Task -->
-  <text x="55" y="93" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="bold">Tablero Kanban de Tareas</text>
-  <rect x="440" y="78" width="110" height="24" rx="6" fill="#10b981"/>
-  <text x="465" y="94" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">+ Nueva Tarea</text>
+  <!-- Panel Izquierdo: Cifrado de Discos (BitLocker) -->
+  <rect x="24" y="58" width="280" height="278" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="25" y="59" width="278" height="32" fill="#0f172a" rx="3"/>
+  <text x="40" y="80" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Cifrado de Unidad BitLocker</text>
 
-  <!-- Column 1: Por Hacer -->
-  <rect x="50" y="115" width="155" height="195" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-  <rect x="60" y="125" width="80" height="14" rx="4" fill="#ef4444" opacity="0.8"/>
-  <text x="68" y="136" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">POR HACER (3)</text>
-  <!-- Task cards -->
-  <rect x="60" y="150" width="135" height="42" rx="6" fill="#1e293b"/>
-  <rect x="70" y="160" width="100" height="8" rx="2" fill="#e2e8f0"/>
-  <rect x="70" y="174" width="60" height="6" rx="2" fill="#ef4444"/>
+  <!-- Unidad C: -->
+  <rect x="38" y="102" width="252" height="66" rx="4" fill="#0f172a" stroke="#0078d4" stroke-width="1.5"/>
+  <text x="52" y="123" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Disco Local (C:) - Sistema Operativo</text>
+  <text x="52" y="141" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">Cifrado AES-256 | TPM 2.0 Habilitado</text>
+  <rect x="52" y="148" width="160" height="6" rx="3" fill="#334155"/>
+  <rect x="52" y="148" width="160" height="6" rx="3" fill="#10b981"/>
+  <text x="220" y="155" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">100% Cifrado</text>
 
-  <rect x="60" y="200" width="135" height="42" rx="6" fill="#1e293b"/>
-  <rect x="70" y="210" width="85" height="8" rx="2" fill="#e2e8f0"/>
-  <rect x="70" y="224" width="40" height="6" rx="2" fill="#f59e0b"/>
+  <!-- Unidad D: -->
+  <rect x="38" y="178" width="252" height="66" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="52" y="199" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Almacenamiento Datos (D:)</text>
+  <text x="52" y="217" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">Protección de Datos Confidenciales</text>
+  <rect x="52" y="224" width="160" height="6" rx="3" fill="#334155"/>
+  <rect x="52" y="224" width="160" height="6" rx="3" fill="#0078d4"/>
+  <text x="220" y="231" fill="#60a5fa" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">Protegido</text>
 
-  <rect x="60" y="250" width="135" height="42" rx="6" fill="#1e293b"/>
-  <rect x="70" y="260" width="90" height="8" rx="2" fill="#e2e8f0"/>
-  <rect x="70" y="274" width="50" height="6" rx="2" fill="#38bdf8"/>
+  <!-- Resumen de Política de Seguridad -->
+  <rect x="38" y="254" width="252" height="68" rx="4" fill="rgba(0,120,212,0.12)" stroke="#0078d4" stroke-width="1"/>
+  <text x="52" y="274" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">POLÍTICA DE CUMPLIMIENTO TI</text>
+  <text x="52" y="292" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="10">Clave de recuperación respaldada en AD</text>
+  <text x="52" y="308" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="10">Directiva corporativa Conecel S.A. OK</text>
 
-  <!-- Column 2: En Progreso -->
-  <rect x="222" y="115" width="155" height="195" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-  <rect x="232" y="125" width="95" height="14" rx="4" fill="#f59e0b" opacity="0.8"/>
-  <text x="240" y="136" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">EN PROGRESO (2)</text>
-  <!-- Task cards -->
-  <rect x="232" y="150" width="135" height="42" rx="6" fill="#1e293b"/>
-  <rect x="242" y="160" width="95" height="8" rx="2" fill="#e2e8f0"/>
-  <rect x="242" y="174" width="55" height="6" rx="2" fill="#f59e0b"/>
+  <!-- Panel Derecho: Inventario de Activos y Destrucción Segura -->
+  <rect x="316" y="58" width="260" height="278" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="317" y="59" width="258" height="32" fill="#0f172a" rx="3"/>
+  <text x="332" y="80" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700">Gestión de Activos &amp; Baja Segura</text>
 
-  <rect x="232" y="200" width="135" height="42" rx="6" fill="#1e293b"/>
-  <rect x="242" y="210" width="75" height="8" rx="2" fill="#e2e8f0"/>
-  <rect x="242" y="224" width="45" height="6" rx="2" fill="#38bdf8"/>
+  <!-- Control de Inventario -->
+  <text x="332" y="112" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">ESTADO DEL INVENTARIO DE HARDWARE</text>
+  
+  <rect x="332" y="122" width="228" height="30" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="344" y="141" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="11">Equipos asignados en inventario</text>
+  <text x="536" y="141" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" text-anchor="end">412</text>
 
-  <!-- Column 3: Hecho -->
-  <rect x="395" y="115" width="155" height="195" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-  <rect x="405" y="125" width="80" height="14" rx="4" fill="#10b981" opacity="0.8"/>
-  <text x="415" y="136" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold">HECHO (4)</text>
-  <!-- Task cards -->
-  <rect x="405" y="150" width="135" height="42" rx="6" fill="#1e293b"/>
-  <rect x="415" y="160" width="80" height="8" rx="2" fill="#94a3b8"/>
-  <rect x="415" y="174" width="40" height="6" rx="2" fill="#10b981"/>
+  <rect x="332" y="158" width="228" height="30" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="344" y="177" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="11">Medios con cifrado verificado</text>
+  <text x="536" y="177" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" text-anchor="end">100%</text>
 
-  <rect x="405" y="200" width="135" height="42" rx="6" fill="#1e293b"/>
-  <rect x="415" y="210" width="90" height="8" rx="2" fill="#94a3b8"/>
-  <rect x="415" y="224" width="60" height="6" rx="2" fill="#10b981"/>
+  <!-- Destrucción Segura y Baja Tecnológica -->
+  <text x="332" y="210" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">BAJA TECNOLÓGICA &amp; SANITIZACIÓN</text>
+
+  <rect x="332" y="220" width="228" height="102" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="344" y="240" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">[OK] Desmagnetización de discos (Degauss)</text>
+  <text x="344" y="260" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">[OK] Sobreescritura segura (DoD 5220.22-M)</text>
+  <text x="344" y="280" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">[OK] Acta de destrucción física de medios</text>
+  <text x="344" y="304" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10">Custodia final y reporte técnico emitido</text>
 </svg>

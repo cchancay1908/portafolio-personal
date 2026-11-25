@@ -1,55 +1,102 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
   <defs>
-    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0c4a6e"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+    <linearGradient id="headerGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0078d4"/>
+      <stop offset="100%" stop-color="#005a9e"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="360" fill="url(#bg3)"/>
-  
-  <!-- Browser window chrome -->
-  <rect x="30" y="25" width="540" height="310" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
-  <rect x="30" y="25" width="540" height="36" rx="10" fill="#0f172a"/>
-  <!-- Window buttons -->
-  <circle cx="55" cy="43" r="5" fill="#ef4444"/>
-  <circle cx="72" cy="43" r="5" fill="#f59e0b"/>
-  <circle cx="89" cy="43" r="5" fill="#10b981"/>
-  <rect x="120" y="34" width="280" height="18" rx="4" fill="#1e293b"/>
-  <text x="135" y="47" fill="#64748b" font-family="sans-serif" font-size="10">https://weather-analytics.io</text>
 
-  <!-- Left: Weather Widget -->
-  <rect x="50" y="80" width="180" height="230" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-  <text x="70" y="110" fill="#f8fafc" font-family="sans-serif" font-size="16" font-weight="bold">Ciudad de México</text>
-  <text x="70" y="128" fill="#94a3b8" font-family="sans-serif" font-size="11">Parcialmente nublado</text>
+  <!-- Fondo de la ventana -->
+  <rect width="600" height="360" fill="#0f172a" rx="8"/>
   
-  <!-- Sun & cloud icon -->
-  <circle cx="100" cy="170" r="24" fill="#fbbf24"/>
-  <path d="M 90 185 C 90 170, 115 170, 125 180 C 135 170, 155 175, 155 188 C 165 190, 165 202, 150 205 L 90 205 Z" fill="#94a3b8" opacity="0.85"/>
+  <!-- Barra superior estilo Microsoft Visual Studio & SQL Server Management Studio -->
+  <rect x="0" y="0" width="600" height="42" fill="url(#headerGrad3)" rx="8"/>
+  <rect x="0" y="30" width="600" height="12" fill="url(#headerGrad3)"/>
   
-  <text x="140" y="165" fill="#38bdf8" font-family="sans-serif" font-size="28" font-weight="bold">24°C</text>
-  <rect x="70" y="235" width="140" height="1" fill="#334155"/>
-  <text x="70" y="260" fill="#94a3b8" font-family="sans-serif" font-size="10">Viento: 14 km/h</text>
-  <text x="70" y="280" fill="#94a3b8" font-family="sans-serif" font-size="10">Humedad: 58%</text>
+  <!-- Título -->
+  <text x="24" y="26" fill="#ffffff" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700">SQL Server Management Studio &amp; C# ASP.NET</text>
+  <rect x="475" y="11" width="105" height="20" rx="3" fill="rgba(255,255,255,0.18)"/>
+  <text x="527" y="25" fill="#ffffff" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">SQL Server 2012</text>
 
-  <!-- Right: Chart / Forecast Analytics -->
-  <rect x="250" y="80" width="300" height="230" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-  <text x="270" y="110" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="bold">Pronóstico Semanal y Temperatura</text>
-  
-  <!-- Chart area -->
-  <path d="M 280 230 Q 330 150 370 180 T 450 140 T 520 170 L 520 260 L 280 260 Z" fill="url(#chartGrad)"/>
-  <path d="M 280 230 Q 330 150 370 180 T 450 140 T 520 170" fill="none" stroke="#38bdf8" stroke-width="3"/>
-  <circle cx="330" cy="150" r="4" fill="#38bdf8"/>
-  <circle cx="370" cy="180" r="4" fill="#38bdf8"/>
-  <circle cx="450" cy="140" r="4" fill="#38bdf8"/>
-  <circle cx="520" cy="170" r="4" fill="#38bdf8"/>
+  <!-- Panel Izquierdo: Explorador de Objetos de Base de Datos -->
+  <rect x="24" y="58" width="190" height="278" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="25" y="59" width="188" height="30" fill="#0f172a" rx="3"/>
+  <text x="36" y="79" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">EXPLORADOR DE OBJETOS</text>
 
-  <text x="280" y="280" fill="#64748b" font-family="sans-serif" font-size="10">LUN</text>
-  <text x="330" y="280" fill="#64748b" font-family="sans-serif" font-size="10">MAR</text>
-  <text x="380" y="280" fill="#64748b" font-family="sans-serif" font-size="10">MIÉ</text>
-  <text x="430" y="280" fill="#64748b" font-family="sans-serif" font-size="10">JUE</text>
-  <text x="480" y="280" fill="#64748b" font-family="sans-serif" font-size="10">VIE</text>
+  <!-- Árbol de Base de Datos -->
+  <text x="38" y="110" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700">v Servidor_Sistemas (SQL 2012)</text>
+  <text x="48" y="130" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="11">v Bases de Datos</text>
+  <text x="58" y="150" fill="#60a5fa" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">v BD_HelpDesk_Conecel</text>
+  <text x="68" y="170" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="10">> Tablas</text>
+  <text x="78" y="188" fill="#94a3b8" font-family="'Segoe UI', monospace" font-size="10">dbo.tbl_Incidentes</text>
+  <text x="78" y="206" fill="#94a3b8" font-family="'Segoe UI', monospace" font-size="10">dbo.tbl_Equipos_Activos</text>
+  <text x="78" y="224" fill="#94a3b8" font-family="'Segoe UI', monospace" font-size="10">dbo.tbl_Usuarios_SLA</text>
+  <text x="68" y="244" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="10">> Procedimientos Almacenados</text>
+  <text x="78" y="262" fill="#94a3b8" font-family="'Segoe UI', monospace" font-size="10">sp_RegistrarIncidente</text>
+  <text x="78" y="280" fill="#94a3b8" font-family="'Segoe UI', monospace" font-size="10">sp_CalcularMetricaSLA</text>
+
+  <rect x="34" y="296" width="170" height="26" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="44" y="313" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600">● Conectado (SA / localhost)</text>
+
+  <!-- Panel Derecho: Editor de Consultas SQL y Código C# ASP.NET -->
+  <rect x="226" y="58" width="350" height="278" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  
+  <!-- Pestañas de archivos -->
+  <rect x="227" y="59" width="348" height="30" fill="#0f172a" rx="3"/>
+  
+  <rect x="232" y="64" width="130" height="25" rx="3" fill="#1e293b" stroke="#0078d4" stroke-width="1"/>
+  <text x="242" y="81" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">Consulta_SLA.sql</text>
+
+  <rect x="368" y="64" width="130" height="25" rx="3" fill="#0f172a"/>
+  <text x="378" y="81" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600">IncidentesController.cs</text>
+
+  <!-- Código SQL en el Editor -->
+  <rect x="236" y="98" width="330" height="92" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="248" y="118" fill="#60a5fa" font-family="'Consolas', monospace" font-size="11" font-weight="700">SELECT</text>
+  <text x="296" y="118" fill="#f8fafc" font-family="'Consolas', monospace" font-size="11">IdTicket, Usuario, Equipo, Estado, SLA_Min</text>
+  <text x="248" y="136" fill="#60a5fa" font-family="'Consolas', monospace" font-size="11" font-weight="700">FROM</text>
+  <text x="280" y="136" fill="#f8fafc" font-family="'Consolas', monospace" font-size="11">dbo.tbl_Incidentes_Soporte</text>
+  <text x="248" y="154" fill="#60a5fa" font-family="'Consolas', monospace" font-size="11" font-weight="700">WHERE</text>
+  <text x="288" y="154" fill="#f8fafc" font-family="'Consolas', monospace" font-size="11">Estado = 'Resuelto'</text>
+  <text x="428" y="154" fill="#60a5fa" font-family="'Consolas', monospace" font-size="11" font-weight="700">AND</text>
+  <text x="456" y="154" fill="#f8fafc" font-family="'Consolas', monospace" font-size="11">Anio = 2024</text>
+  <text x="248" y="172" fill="#60a5fa" font-family="'Consolas', monospace" font-size="11" font-weight="700">ORDER BY</text>
+  <text x="312" y="172" fill="#f8fafc" font-family="'Consolas', monospace" font-size="11">FechaResolucion DESC;</text>
+
+  <!-- Grilla de Resultados de la Consulta -->
+  <text x="248" y="210" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700">RESULTADOS (342 REGISTROS AFECTADOS)</text>
+
+  <rect x="236" y="218" width="330" height="88" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  
+  <!-- Encabezados de grilla -->
+  <rect x="237" y="219" width="328" height="20" fill="#1e293b"/>
+  <text x="248" y="233" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="700">ID</text>
+  <text x="282" y="233" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="700">USUARIO</text>
+  <text x="365" y="233" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="700">EQUIPO</text>
+  <text x="450" y="233" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="700">ESTADO</text>
+  <text x="515" y="233" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="700">SLA</text>
+
+  <!-- Fila 1 de resultados -->
+  <text x="248" y="254" fill="#f8fafc" font-family="'Segoe UI', monospace" font-size="9">8492</text>
+  <text x="282" y="254" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="9">mrodriguez</text>
+  <text x="365" y="254" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="9">WS-FIN-04</text>
+  <text x="450" y="254" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="600">Resuelto</text>
+  <text x="515" y="254" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="600">12 min</text>
+
+  <!-- Fila 2 de resultados -->
+  <text x="248" y="274" fill="#f8fafc" font-family="'Segoe UI', monospace" font-size="9">8491</text>
+  <text x="282" y="274" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="9">cchancay</text>
+  <text x="365" y="274" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="9">SRV-APP-02</text>
+  <text x="450" y="274" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="600">Resuelto</text>
+  <text x="515" y="274" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="600">18 min</text>
+
+  <!-- Fila 3 de resultados -->
+  <text x="248" y="294" fill="#f8fafc" font-family="'Segoe UI', monospace" font-size="9">8490</text>
+  <text x="282" y="294" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-size="9">lvasquez</text>
+  <text x="365" y="294" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="9">WS-LOG-11</text>
+  <text x="450" y="294" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="600">Resuelto</text>
+  <text x="515" y="294" fill="#10b981" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="600">15 min</text>
+
+  <!-- Barra de estado inferior -->
+  <text x="236" y="322" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600">ASP.NET Core Web API | Integración SQL Server 2012 OK</text>
 </svg>
